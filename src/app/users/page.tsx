@@ -1,10 +1,10 @@
-import DashBoard from "@/pages/Dashboard/Dashboard";
+import Users from "@/pages/Users/Users";
 import React from "react";
 
 const page = () => {
   return (
     <div>
-      <DashBoard />
+      <Users />
     </div>
   );
 };

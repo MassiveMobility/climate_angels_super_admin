@@ -52,72 +52,59 @@ type Props = {
 
 const navItems = [
   {
-    name: "Portfolio",
+    name: "Dashboard",
     icon: <TrendingUpRoundedIcon sx={{ color: "#484644", fontSize: "20px" }} />,
     path: "/",
     children: [],
   },
+
   {
-    name: "Invest",
-    icon: (
-      <CurrencyRupeeRoundedIcon sx={{ color: "#484644", fontSize: "20px" }} />
-    ),
-    path: "/invest",
-    children: [
-      {
-        child: "Deal-flow",
-        path: "/deal-flow",
-      },
-      {
-        child: "Deal-invites",
-        path: "/deal-invites",
-      },
-      {
-        child: "Commitments",
-        path: "/commitment",
-      },
-    ],
+    name: "Users",
+    icon: <Groups2OutlinedIcon sx={{ color: "#484644", fontSize: "20px" }} />,
+    path: "/users",
+    children: [],
   },
   {
     name: "Syndicates",
     icon: <Groups2OutlinedIcon sx={{ color: "#484644", fontSize: "20px" }} />,
-    path: "/syndicate",
+    path: "/syndicates",
     children: [],
   },
   {
-    name: "Ledger",
+    name: "Deals & Schemes",
     icon: (
       <TableChartOutlinedIcon sx={{ color: "#484644", fontSize: "20px" }} />
     ),
-    path: "/ledger",
+    path: "/deals&schemes",
     children: [],
   },
   {
-    name: "Messages",
+    name: "Commitments",
     icon: <ChatOutlinedIcon sx={{ color: "#484644", fontSize: "20px" }} />,
     path: "/messages",
     children: [],
   },
   {
-    name: "Events",
+    name: "KYC",
     icon: (
       <CalendarMonthOutlinedIcon sx={{ color: "#484644", fontSize: "20px" }} />
     ),
     path: "/events",
     children: [],
   },
+
   {
-    name: "News & Blogs",
-    icon: <FeedOutlinedIcon sx={{ color: "#484644", fontSize: "20px" }} />,
-    path: "/news-blogs",
-    children: [],
-  },
-  {
-    name: "Help & Support",
+    name: "Documents",
     icon: (
       <ContactSupportOutlinedIcon sx={{ color: "#484644", fontSize: "20px" }} />
     ),
     path: "/help-support",
+    children: [],
+  },
+  {
+    name: "Communications",
+    icon: <FeedOutlinedIcon sx={{ color: "#484644", fontSize: "20px" }} />,
+    path: "/news-blogs",
     children: [],
   },
 ];
@@ -415,32 +402,7 @@ const Sidebar = ({ window, children }: Props) => {
                           {item.name}
                         </Typography>
                       </AccordionSummary>
-                      <AccordionDetails
-                        sx={{
-                          ml: 1.3,
-                          borderLeft: "1px solid #C0C0C0",
-                          padding: "0px",
-                        }}
-                      >
-                        {item.children.map((ch) => (
-                          <Typography
-                            key={ch.child}
-                            onClick={() => handleItemClick(ch.child, ch.path)}
-                            sx={{
-                              cursor: "pointer",
-                              ml: 1,
-                              padding: "8px",
-                              borderRadius: "8px",
-                              fontFamily: " mySecondFont",
-                              bgcolor:
-                                selectedItem === ch.child ? "#484644" : "",
-                              color: selectedItem === ch.child ? "#fff" : "",
-                            }}
-                          >
-                            {ch.child}
-                          </Typography>
-                        ))}
-                      </AccordionDetails>
+
                     </Accordion>
                   ) : (
                     <Box

@@ -1,5 +1,5 @@
 "use client";
-import DashBoard from "@/pages/DashBoard/DashBoard";
+import DashBoard from "../pages/Dashboard/Dashboard";
 import "./globals.css";
 import { Box } from "@mui/material";
 
